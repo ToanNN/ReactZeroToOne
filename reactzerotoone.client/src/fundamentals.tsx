@@ -4,9 +4,9 @@
 //declare the shared state in their parent component instead.
 //The parent component can pass that state back down to the children via props.
 //This keeps the child components in sync with each other and with their parent.
-function MyButton({ count , onClick}) {   
 
-  
+//It’s strongly recommended that you assign proper keys whenever you build dynamic lists
+function MyButton({ count , onClick}) {
 
     return (
         <button onClick={onClick}>
