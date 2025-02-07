@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
 import './App.css';
-import { MyButton } from './fundamentals';
-import Board from './tictactoe/dashboard';
+
+import Tictactoe from './tictactoe/tictactoe';
 
 interface Forecast {
     date: string;
@@ -13,7 +12,7 @@ interface Forecast {
 function App() {
    
     return (
-        <Board/>
+        <Tictactoe />
     );
 }
 

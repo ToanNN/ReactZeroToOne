@@ -10,9 +10,8 @@ function Square({ value, onSquareClick }) {
   );
 }
 
-export default function Board() {
-  const [squares, setSquares] = useState(Array(9).fill(null));
-  const [xIsNext, setXIsNext] = useState(true);
+export default function Board({xIsNext, squares, onPlay}) {
+   
 
   function handleClick(i) {
     if (squares[i] || calculateWinner(squares)) {
@@ -30,9 +29,7 @@ export default function Board() {
     }
     // Calling set method lets React know the state of the component has changed
     // Trigger a re-render of the components that use the squares state (Board) as well as its child components (the Square components that make up the board).
-    setSquares(nextSquares);
-
-    setXIsNext(!xIsNext);
+    onPlay(nextSquares)
   }
 
   function calculateWinner(squares) {
